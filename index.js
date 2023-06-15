@@ -14,10 +14,7 @@ import config from "./config/index.js";
 mongoose.set("strictQuery", false);
 
 mongoose
-    .connect(
-        config.mongoDB
-        // "mongodb+srv://test:wwwwwww@cluster0.y6xxsht.mongodb.net/blog?retryWrites=true&w=majority"
-    )
+    .connect(config.mongoDB)
     .then(() => console.log("DB ok"))
     .catch((err) => console.log("DB error", err));
 
